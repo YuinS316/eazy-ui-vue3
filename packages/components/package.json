@@ -1,0 +1,25 @@
+{
+  "name": "@eazy-ui/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "vite build & esno build/buildSass",
+    "build:sass": "esno build/buildSass"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "@eazy-ui/utils": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
