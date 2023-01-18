@@ -1,12 +1,10 @@
 <script lang="ts">
+import { defineComponent } from "vue";
 import "./styles/index.sass";
-export default {
+export default defineComponent({
   name: "EzButton",
-};
-</script>
-
-<script lang="ts" setup>
-const props = defineProps({});
+  setup() {},
+});
 </script>
 
 <template>
