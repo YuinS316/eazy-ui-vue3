@@ -14,7 +14,7 @@
   ],
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "typings": "lib/index.d.ts",
   "dependencies": {
     "@eazy-ui/utils": "workspace:^1.0.0"

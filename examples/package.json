@@ -6,12 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "update:pkg": "pnpm i @eazy-ui/components -r --filter examples"
+    "update:pkg": "pnpm i @eazy-ui/components@* --filter examples"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@eazy-ui/components": "workspace:^1.0.0"
+    "@eazy-ui/components": "workspace:*"
   }
 }
