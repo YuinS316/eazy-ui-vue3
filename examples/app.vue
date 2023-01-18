@@ -4,5 +4,5 @@ import { EzButton } from "@eazy-ui/components";
 
 <template>
   <div>启动测试</div>
-  <EzButton></EzButton>
+  <ez-button></ez-button>
 </template>
