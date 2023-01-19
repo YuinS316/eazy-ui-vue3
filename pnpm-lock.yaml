@@ -41,7 +41,7 @@ importers:
 
   packages/components:
     specifiers:
-      '@eazy-ui/utils': workspace:^1.0.0
+      '@eazy-ui/utils': workspace:*
       sass: ^1.57.1
     dependencies:
       '@eazy-ui/utils': link:../utils

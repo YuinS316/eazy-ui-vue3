@@ -6,7 +6,8 @@
   "module": "es/index.js",
   "scripts": {
     "build": "vite build & esno build/buildSass",
-    "build:sass": "esno build/buildSass"
+    "build:sass": "esno build/buildSass",
+    "update:pkg": "pnpm i @eazy-ui/utils@* --filter @eazy-ui/components"
   },
   "files": [
     "es",
@@ -16,10 +17,10 @@
   "author": "",
   "license": "MIT",
   "typings": "lib/index.d.ts",
-  "dependencies": {
-    "@eazy-ui/utils": "workspace:^1.0.0"
-  },
   "devDependencies": {
     "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "@eazy-ui/utils": "workspace:*"
   }
 }

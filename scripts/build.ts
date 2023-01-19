@@ -5,6 +5,7 @@ import { resolve } from "path";
 const CWD = process.cwd();
 
 const PKG_EMAMPLES = resolve(CWD, "./examples");
+const PKG_UTILS = resolve(CWD, "./packages/utils");
 const PKG_COMPONENTS = resolve(CWD, "./packages/components");
 
 //  examples安装components
@@ -14,6 +15,9 @@ export const installComponents = async () =>
 //  打包components组件
 export const buildComponents = async () =>
   await execa("pnpm", ["build"], { cwd: PKG_COMPONENTS });
+
+export const buildUtils = async () =>
+  await execa("pnpm", ["build"], { cwd: PKG_UTILS });
 
 export async function runTask(taskName: string, task: () => Promise<any>) {
   const spinner = ora().start(`Running ${taskName}`);

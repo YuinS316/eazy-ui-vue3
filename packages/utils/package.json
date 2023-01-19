@@ -2,10 +2,11 @@
   "name": "@eazy-ui/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
