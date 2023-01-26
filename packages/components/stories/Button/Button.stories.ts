@@ -1,4 +1,5 @@
 import EzButton from "../../src/button/index";
+import { ButtonType, ButtonSize } from "../../src/button/types";
 import { Meta, StoryFn } from "@storybook/vue3";
 
 export default {
@@ -10,7 +11,19 @@ export default {
   component: EzButton,
   argTypes: {
     type: {
-      options: ["default", "primary", "success", "danger", "warning"],
+      options: ButtonType,
+      control: { type: "radio" },
+    },
+    size: {
+      options: ButtonSize,
+      control: { type: "radio" },
+    },
+    round: {
+      options: [true, false],
+      control: { type: "radio" },
+    },
+    disabled: {
+      options: [true, false],
       control: { type: "radio" },
     },
   },
@@ -21,8 +34,16 @@ const Template: StoryFn<typeof EzButton> = (args) => ({
   setup() {
     return { args };
   },
-  template: '<ez-button v-bind="args">template</ez-button>',
+  template: '<ez-button v-bind="args">button</ez-button>',
 });
 
 export const Primary = Template.bind({});
-Primary.args = { type: "primary" };
+Primary.args = {
+  type: "primary",
+  size: "normal",
+  disabled: false,
+  round: false,
+};
+
+export const Large = Template.bind({});
+Large.args = { type: "default", size: "large", disabled: true, round: true };

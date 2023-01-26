@@ -1,6 +1,6 @@
 <script lang="ts">
 import "./styles/index.sass";
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import { buttonProps } from "./types";
 import { createNamespace } from "@/_utils/index";
 
@@ -27,14 +27,20 @@ export default defineComponent({
 <template>
   <button
     :class="[
-      ...cls(n(), n('$--box'), n('$--inline-block')),
-      n(`--${type}`),
-      n(`--${size}`),
+      ...cls(
+        n(),
+        n('$--box'),
+        n('$--inline-block'),
+        n(`--${type}`),
+        n(`--${size}`),
+        [round, n('--rounded')],
+        [disabled, n('--disabled')]
+      ),
     ]"
     @click="handleClick"
   >
     <div :class="cls(n('content'))">
-      <slot>test</slot>
+      <slot></slot>
     </div>
   </button>
 </template>
