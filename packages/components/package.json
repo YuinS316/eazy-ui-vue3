@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
+    "dev": "vite",
     "build": "vite build & esno build/buildSass",
     "build:sass": "esno build/buildSass",
     "update:pkg": "pnpm i @eazy-ui/utils@* --filter @eazy-ui/components"
