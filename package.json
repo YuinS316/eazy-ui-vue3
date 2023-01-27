@@ -11,6 +11,11 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0",
+    "pnpm": ">=7.15.0"
+  },
+  "packageManager": "pnpm@7.15.0",
   "devDependencies": {
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-interactions": "^6.5.15",

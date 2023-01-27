@@ -32,9 +32,12 @@ export default {
 const Template: StoryFn<typeof EzButton> = (args) => ({
   components: { EzButton },
   setup() {
-    return { args };
+    const handleClick = (e: Event) => {
+      console.log("click!!");
+    };
+    return { args, handleClick };
   },
-  template: '<ez-button v-bind="args">button</ez-button>',
+  template: '<ez-button v-bind="args" @click="handleClick">button</ez-button>',
 });
 
 export const Primary = Template.bind({});

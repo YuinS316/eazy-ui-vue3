@@ -1,4 +1,5 @@
 import { isArray } from "@eazy-ui/utils";
+import { PropType } from "vue";
 
 type ClassName = string | undefined | null;
 type Classes = (ClassName | [any, ClassName, ClassName?])[];
@@ -52,4 +53,24 @@ export function createNamespace(name: string) {
     n: createBEM,
     cls: classNames,
   };
+}
+
+export function defineListenerProps<F>(callback?: any) {
+  return {
+    type: [Function, Array] as PropType<F | F[]>,
+    default: callback,
+  };
+}
+
+export function call<P extends any[], R>(
+  fn: ((...args: P) => R) | ((...args: P) => R)[] | null,
+  ...args: P
+) {
+  if (isArray(fn)) {
+    return fn.map((f) => f(...args));
+  }
+
+  if (fn) {
+    return fn(...args);
+  }
 }

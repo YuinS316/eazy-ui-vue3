@@ -2,17 +2,19 @@
 import "./styles/index.sass";
 import { defineComponent, ref } from "vue";
 import { buttonProps } from "./types";
-import { createNamespace } from "@/_utils/index";
+import { createNamespace, call } from "@/_utils/index";
 
 export default defineComponent({
   name: "EzButton",
   props: buttonProps,
-  emits: ["onClick"],
-  setup(props, { emit }) {
+  setup(props) {
     const { n, cls } = createNamespace("button");
 
     const handleClick = (e: Event) => {
-      emit("onClick", e);
+      const { onClick, disabled } = props;
+      if (!onClick || disabled) return;
+
+      call(onClick, e);
     };
 
     return {
@@ -30,7 +32,7 @@ export default defineComponent({
       ...cls(
         n(),
         n('$--box'),
-        n('$--inline-block'),
+        [block, n('$--block'), n('$--inline-block')],
         n(`--${type}`),
         n(`--${size}`),
         [round, n('--rounded')],

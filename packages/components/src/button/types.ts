@@ -1,3 +1,4 @@
+import { defineListenerProps } from "@/_utils";
 import { ExtractPropTypes } from "vue";
 
 export const ButtonType = [
@@ -29,6 +30,11 @@ export const buttonProps = {
     type: Boolean,
     default: false,
   },
+  block: {
+    type: Boolean,
+    default: false,
+  },
+  onClick: defineListenerProps<(e: Event) => void>(),
 };
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
