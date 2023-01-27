@@ -5,6 +5,8 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "storybook": "start-storybook -p 6006",
     "build": "vite build & esno build/buildSass",
     "build:sass": "esno build/buildSass",
