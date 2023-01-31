@@ -8,6 +8,7 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "storybook": "start-storybook -p 6006",
+    "gen": "hygen component new",
     "build": "vite build & esno build/buildSass",
     "build:sass": "esno build/buildSass",
     "update:pkg": "pnpm i @eazy-ui/utils@* --filter @eazy-ui/components"
