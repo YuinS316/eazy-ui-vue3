@@ -3,7 +3,7 @@ import { mount } from "@vue/test-utils";
 import { createApp } from "vue";
 import EzButton from "../button.vue";
 import Button from "..";
-import { ButtonType, ButtonSize } from "../types";
+import { ButtonType, ButtonSize } from "../props";
 import { trigger } from "@/_utils/vitest";
 
 describe("button", () => {
