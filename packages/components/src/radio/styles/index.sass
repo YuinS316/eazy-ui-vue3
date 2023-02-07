@@ -8,6 +8,10 @@
   --radio-dot-bg: #fff
   --radio-dot-active: var(--color-primary)
 
+  --radio-disabled-color: var(--disabled-color)
+  --radio-disabled-text-color: var(--disabled-text-color)
+  --radio-disabled-border-color: var(--disabled-border-color)
+
 
 .ez-radio
   position: relative
@@ -63,3 +67,15 @@
     display: inline-block
     color: var(--color-text)
     padding: var(--radio-label-padding)
+
+  &--disabled
+    &:hover .ez-radio--dot
+      box-shadow: var(--radio-dot-shadow)
+    .ez-radio--input
+      cursor: not-allowed
+      pointer-events: none
+    .ez-radio--dot
+      background: var(--radio-disabled-color)
+    .ez-radio--label
+      color: var(--radio-disabled-text-color)
+      

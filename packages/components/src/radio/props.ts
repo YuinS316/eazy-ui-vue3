@@ -9,11 +9,11 @@ export const radioProps = {
   },
   checkedValue: {
     type: [String, Number, Boolean] as PropType<any>,
-    default: true,
+    default: "",
   },
   uncheckedValue: {
     type: [String, Number, Boolean] as PropType<any>,
-    default: false,
+    default: "",
   },
   label: {
     type: String,

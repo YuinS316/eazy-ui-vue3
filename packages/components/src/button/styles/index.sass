@@ -8,6 +8,10 @@
   --btn-danger-color: var(--color-danger)
   --btn-warning-color: var(--color-warning)
 
+  --btn-disabled-color: var(--disabled-color)
+  --btn-disabled-text-color: var(--disabled-text-color)
+  --btn-disabled-border-color: var(--disabled-border-color)
+
   --btn-large-padding: 0 16px
   --btn-large-height: 36px
   --btn-large-font-size: 16px
@@ -87,8 +91,8 @@
 
   &--disabled
     cursor: not-allowed
-    background-color: rgba(0, 0, 0, .04)
-    color: rgba(0,0,0,.25)
-    border-color: #d9d9d9
+    background-color: var(--btn-disabled-color)
+    color: var(--btn-disabled-text-color)
+    border-color: var(--btn-disabled-border-color)
     &:hover
       opacity: 1
