@@ -1,4 +1,4 @@
-import { isArray } from "@eazy-ui/utils";
+import { isArray } from "@/_utils/shared";
 import { PropType } from "vue";
 
 type ClassName = string | undefined | null;

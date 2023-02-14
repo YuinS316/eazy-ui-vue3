@@ -15,3 +15,5 @@ export const isPlainObject = (val: unknown): val is Record<string, any> =>
 
 export const isObject = (val: unknown): val is Record<string, any> =>
   typeof val === "object" && val !== null;
+
+export const isDef = <T = any>(val: unknown): val is T => val !== undefined;
