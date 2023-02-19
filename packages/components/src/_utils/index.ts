@@ -74,3 +74,17 @@ export function call<P extends any[], R>(
     return fn(...args);
   }
 }
+
+export function nextFrame(cb?: Function) {
+  return new Promise((resolve) => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        resolve(cb?.());
+      });
+    });
+  });
+}
+
+export function getRect(el: HTMLElement) {
+  return el.getBoundingClientRect();
+}

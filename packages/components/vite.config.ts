@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import autoprefixer from "autoprefixer";
 
 function _resolve(dir: string) {
   return resolve(__dirname, dir);
@@ -56,6 +57,11 @@ export default defineConfig({
     lib: {
       entry: "./index.ts",
       formats: ["es", "cjs"],
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [autoprefixer],
     },
   },
   plugins: [

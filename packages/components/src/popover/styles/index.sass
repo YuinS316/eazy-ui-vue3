@@ -1,0 +1,51 @@
+@use "../../_styles/common"
+
+:root
+  --popover-opacity: 0.9
+  --popover-border-radiu: 4px
+  --popover-default-color: #616161
+  --popover-offset: 8px
+  --popover-fontsize: 14px
+  --popover-padding: 8px 16px
+
+.ez-popover
+
+  &-enter-from, &-leave-to
+    opacity: 0
+  &-enter-active, &-leave-active
+    transition-property: opacity
+    transition-duration: .25s
+
+  display: inline-block
+  width: fit-content
+
+  &popper[data-popper-placement='top'] &__content-container,
+  &popper[data-popper-placement='top-start'] &__content-container,
+  &popper[data-popper-placement='top-end'] &__content-container 
+    margin-bottom: var(--tooltip-offset)
+
+  &popper[data-popper-placement='bottom'] &__content-container,
+  &popper[data-popper-placement='bottom-start'] &__content-container,
+  &popper[data-popper-placement='bottom-end'] &__content-container 
+    margin-top: var(--tooltip-offset)  
+
+  &popper[data-popper-placement='left'] &__content-container,
+  &popper[data-popper-placement='left-start'] &__content-container,
+  &popper[data-popper-placement='left-end'] &__content-container 
+    margin-right: var(--tooltip-offset)  
+
+  &popper[data-popper-placement='right'] &__content-container,
+  &popper[data-popper-placement='right-start'] &__content-container,
+  &popper[data-popper-placement='right-end'] &__content-container 
+    margin-left: var(--tooltip-offset)  
+
+  &__content-cotainer
+    display: inline-block
+    border-radius: var(--popover-border-radiu)
+    font-size: var(--popover-fontsize)
+    padding: var(--popover-padding)
+    opacity: var(--popover-opacity)
+    background: var(--popover-default-color)
+    color: #fff
+    transition: opacity .25s, background .25s
+
